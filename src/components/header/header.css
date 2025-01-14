@@ -1,0 +1,17 @@
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: var(--gh-header-background);
+}
+
+.header-info {
+  font-family: 'tomorrow';
+  font-weight: 700;
+  font-size: 30px;
+}

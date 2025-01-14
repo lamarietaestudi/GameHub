@@ -1,0 +1,32 @@
+:root {
+  /* COLORS */
+  --gh-text-basic-light: #ffffff;
+  --gh-text-basic-dark: #171717;
+  --gh-header-background: #c6ff41;
+  --gh-body-background: #5a2337;
+  --gh-footer-background: #3b1825;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.games-container {
+  background-color: var(--gh-body-background);
+  height: auto;
+  min-height: calc(100vh - 100px);
+}
+
+.games-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  /* hay que dejar espacio arriba de los juegos para el contador de puntos */
+  padding: 50px;
+}

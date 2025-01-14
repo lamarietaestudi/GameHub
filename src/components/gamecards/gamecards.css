@@ -1,0 +1,29 @@
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.game-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.game-name {
+  color: var(--gh-text-basic-light);
+  font-weight: 100px;
+  padding-bottom: 10px;
+}
+
+.game-img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--gh-text-basic-light);
+  border-radius: 20px;
+  background-color: var(--gh-header-background);
+  box-shadow: 0px 0px 30px 0px var(--gh-footer-background);
+}

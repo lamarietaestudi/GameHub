@@ -1,0 +1,15 @@
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--gh-footer-background);
+}
+
+.footer-info {
+  font-family: 'tomorrow';
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--gh-text-basic-light);
+}
