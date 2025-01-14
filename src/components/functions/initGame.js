@@ -1,25 +1,33 @@
-import { gamesData } from '../../data/gamesData.js';
+import { createCardGames } from '../gamecards/gamecards.js';
+import './initGame.css';
 
-export const initGame = () => {
-  document.body.innerHTML = '';
+export const initGame = (game) => {
+  const gamesContainer = document.querySelector('.games-container');
+  gamesContainer.innerHTML = '';
+
   const gameContainer = document.createElement('div');
-  gameContainer = classList.add('game-container');
-
-  const gameContent = document.createElement('div');
-  gameContent = classList.add('game-content');
+  gameContainer.classList.add('game-container');
 
   const gameTitle = document.createElement('h3');
-  gameTitle = classList.add('game-title');
-  gameTitle.textContent = gamesData.name;
+  gameTitle.classList.add('game-title');
+  gameTitle.textContent = game.name;
 
   const gameInstructions = document.createElement('p');
-  gameInstructions = classList.add('game-instructions');
-  gameInstructions.textContent = gamesData.instructions;
+  gameInstructions.classList.add('game-instructions');
+  gameInstructions.textContent = game.instructions;
 
   const gamePrizes = document.createElement('p');
-  gamePrizes = classList.add('game-prizes');
-  gamePrizes.textContent = gamesData.prizes;
+  gamePrizes.classList.add('game-prizes');
+  gamePrizes.textContent = game.prizes;
+
+  const backButton = document.createElement('button');
+  backButton.classList.add('back-button');
+  backButton.textContent = 'Volver al menú de juegos';
+  backButton.addEventListener('click', () => {
+    gamesContainer.innerHTML = '';
+    createCardGames(gamesContainer);
+  });
 
   gameContainer.append(gameTitle, gameInstructions, gamePrizes);
-  document.body.append(gameContainer);
+  gamesContainer.append(backButton, gameContainer);
 };

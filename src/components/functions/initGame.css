@@ -1,0 +1,49 @@
+.games-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--gh-body-background);
+  height: auto;
+  min-height: calc(100vh - 100px);
+}
+
+.game-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
+}
+
+.game-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: var(--gh-text-gamename);
+}
+
+.game-instructions,
+.game-prizes {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--gh-text-basic-light);
+}
+
+.back-button {
+  display: inline-flex;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: var(--gh-card-shadow);
+  color: var(--gh-text-basic-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.back-button:hover {
+  color: var(--gh-card-shadow);
+  background-color: var(--gh-button-background);
+}

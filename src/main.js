@@ -6,7 +6,7 @@ import { createCardGames } from './components/gamecards/gamecards.js';
 createHeader();
 
 function createGamesContainer() {
-  const gamesContainer = document.createElement('body');
+  const gamesContainer = document.createElement('div');
   gamesContainer.classList.add('games-container');
 
   const gamesContent = document.createElement('div');
