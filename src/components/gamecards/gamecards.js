@@ -7,7 +7,7 @@ export function createCardGames(parentElement) {
 
   gamesList.forEach((game) => {
     const gameCardContainer = document.createElement('div');
-    gameCardContainer.classList.add('game-card-container');
+    gameCardContainer.classList.add('game-card');
 
     const gameCard = document.createElement('button');
     gameCard.classList.add('game-card');

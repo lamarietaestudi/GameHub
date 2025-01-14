@@ -9,7 +9,7 @@ export const createHeader = () => {
   headerContent.classList.add('header-content');
   headerInfo.classList.add('header-info');
 
-  headerInfo.textContent = 'Game Hub 2025';
+  headerInfo.textContent = 'Game Hub';
 
   headerContent.append(headerInfo);
   headerContainer.append(headerContent);

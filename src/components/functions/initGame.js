@@ -3,6 +3,7 @@ import './initGame.css';
 
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
+  gamesContainer.classList.add('init-game-container');
   gamesContainer.innerHTML = '';
 
   const gameContainer = document.createElement('div');
@@ -24,6 +25,7 @@ export const initGame = (game) => {
   backButton.classList.add('back-button');
   backButton.textContent = 'Volver al menú de juegos';
   backButton.addEventListener('click', () => {
+    gamesContainer.classList.remove('init-game-container');
     gamesContainer.innerHTML = '';
     createCardGames(gamesContainer);
   });

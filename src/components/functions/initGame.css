@@ -1,12 +1,9 @@
-.games-container {
+.init-game-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  background-color: var(--gh-body-background);
-  height: auto;
-  min-height: calc(100vh - 100px);
 }
 
 .game-container {
@@ -19,9 +16,10 @@
 
 .game-title {
   font-size: 24px;
-  margin-bottom: 10px;
   font-weight: 400;
   color: var(--gh-text-gamename);
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .game-instructions,
@@ -33,7 +31,7 @@
 
 .back-button {
   display: inline-flex;
-  margin: 20px;
+  margin-bottom: 20px;
   padding: 10px 20px;
   background-color: var(--gh-card-shadow);
   color: var(--gh-text-basic-light);

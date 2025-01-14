@@ -21,11 +21,12 @@
 .games-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   background-color: var(--gh-body-background);
   height: auto;
   min-height: calc(100vh - 100px);
+  padding: 20px;
 }
 
 .games-content {
@@ -33,6 +34,4 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  gap: 70px;
 }

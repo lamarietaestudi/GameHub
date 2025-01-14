@@ -5,17 +5,20 @@
   align-items: center;
   background-color: transparent;
   border: none;
+  margin: 10px;
 }
 
 .game-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   transition: transform 0.3s;
   cursor: pointer;
 }
 
 .game-name {
-  color: var(--gh-text-basic-light);
+  font-size: 20px;
   font-weight: 400;
+  color: var(--gh-text-gamename);
+  margin-top: 50px;
   padding-bottom: 10px;
 }
 
