@@ -1,6 +1,6 @@
 .header-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -14,4 +14,19 @@
   font-family: 'tomorrow';
   font-weight: 700;
   font-size: 30px;
+}
+
+.clear-button {
+  display: inline-flex;
+  padding: 10px 15px;
+  background-color: var(--gh-button-background);
+  color: var(--gh-text-basic-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.clear-button:hover {
+  background-color: var(--gh-card-shadow);
 }

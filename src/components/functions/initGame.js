@@ -3,6 +3,10 @@ import './initGame.css';
 
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
+  if (!gamesContainer) {
+    console.error('No se encuentra el contenedord de juegos');
+    return;
+  }
   gamesContainer.classList.add('init-game-container');
   gamesContainer.innerHTML = '';
 

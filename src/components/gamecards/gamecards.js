@@ -1,6 +1,6 @@
 import './gamecards.css';
 import { gamesData } from '../../data/gamesData.js';
-import { initGame } from '../../components/functions/initGame';
+import { loadIdGame } from '../functions/loadIdGame.js';
 
 export function createCardGames(parentElement) {
   const gamesList = gamesData;
@@ -11,7 +11,7 @@ export function createCardGames(parentElement) {
 
     const gameCard = document.createElement('button');
     gameCard.classList.add('game-card');
-    gameCard.addEventListener('click', () => initGame(game));
+    gameCard.addEventListener('click', () => loadIdGame(game.id));
 
     const gameName = document.createElement('h2');
     gameName.classList.add('game-name');

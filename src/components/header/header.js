@@ -1,4 +1,5 @@
 import './header.css';
+import { createCounter, updateCounter, clearCounter } from '../counter/counter';
 
 export const createHeader = () => {
   const headerContainer = document.createElement('header');
@@ -11,7 +12,16 @@ export const createHeader = () => {
 
   headerInfo.textContent = 'Game Hub';
 
-  headerContent.append(headerInfo);
+  const clearButton = document.createElement('button');
+  clearButton.classList.add('clear-button');
+  clearButton.textContent = 'Reiniciar puntos';
+  clearButton.addEventListener('click', () => {
+    clearCounter();
+  });
+
+  const counter = createCounter();
+
+  headerContent.append(headerInfo, counter, clearButton);
   headerContainer.append(headerContent);
   document.body.append(headerContainer);
 };

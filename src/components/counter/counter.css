@@ -1,0 +1,16 @@
+.counter-container {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: var(--gh-text-basic-light);
+  background-color: var(--gh-footer-background);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px var(--gh-card-shadow);
+}
+
+.points-label {
+  margin-right: auto;
+}
+
+.points-value {
+  font-size: 30px;
+}
