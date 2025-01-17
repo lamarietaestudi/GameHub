@@ -1,8 +1,8 @@
 import './style.css';
-import { createFooter } from './components/footer/footer.js';
 import { createHeader } from './components/header/header.js';
 import { createCardGames } from './components/gamecards/gamecards.js';
 import { loadIdGame } from './components/functions/loadIdGame.js';
+import { createFooter } from './components/footer/footer.js';
 
 createHeader();
 
@@ -25,5 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     createCardGames(gamesContainer);
   }
+
   createFooter();
 });

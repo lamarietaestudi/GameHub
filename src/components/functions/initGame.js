@@ -4,7 +4,7 @@ import './initGame.css';
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
   if (!gamesContainer) {
-    console.error('No se encuentra el contenedord de juegos');
+    console.error('No se encuentra el contenedor de juegos');
     return;
   }
   gamesContainer.classList.add('init-game-container');
@@ -29,6 +29,7 @@ export const initGame = (game) => {
   backButton.classList.add('back-button');
   backButton.textContent = 'Volver al menú de juegos';
   backButton.addEventListener('click', () => {
+    localStorage.removeItem('currentGameId');
     gamesContainer.classList.remove('init-game-container');
     gamesContainer.innerHTML = '';
     createCardGames(gamesContainer);

@@ -1,9 +1,9 @@
 import './topocrash.css';
 import { updateCounter } from '../../components/counter/counter';
-import { createModal, closeModal } from '../../components/modal/modal';
-import { createGamesContainer } from '../../main';
+import { createModal } from '../../components/modal/modal';
 
 export const initSpecificGame = () => {
+  topoCounter = 0;
   const gameContainer = document.querySelector('.game-container');
 
   const scenario = document.createElement('img');
@@ -17,7 +17,7 @@ export const initSpecificGame = () => {
 };
 
 let topoCounter = 0;
-const maxTopos = 2;
+const maxTopos = 20;
 
 const startTopoGeneration = () => {
   const topoInterval = setInterval(() => {
@@ -87,23 +87,7 @@ const checkEndGameCondition = () => {
 };
 
 const endGame = () => {
-  const { playButton, closeButton, modalContainer } = createModal();
-
-  playButton.addEventListener('click', () => {
-    restartGame(modalContainer);
-  });
-
-  closeButton.addEventListener('click', () => {
-    closeModal(modalContainer);
-  });
-};
-
-const restartGame = (modal) => {
-  topoCounter = 0;
-  const gameContainer = document.querySelector('.game-container');
-  gameContainer.innerHTML = '';
-  closeModal(modal);
-  initSpecificGame();
+  createModal();
 };
 
 document.addEventListener('DOMContentLoaded', initSpecificGame);
