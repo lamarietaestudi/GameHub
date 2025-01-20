@@ -21,8 +21,8 @@ export const gamesData = [
     id: 3,
     name: 'Hands War',
     instructions:
-      'Elige piedra, papel o tijera. Piedra gana a tijera, tijera gana a papel, y papel gana a piedra. Juega múltiples rondas para competir contra tu oponente.',
-    prizes: 'Ganas 1 punto por cada ronda que ganes dentro de la partida.',
+      'Elige piedra, papel o tijera. Piedra gana a tijera, tijera gana a papel, y papel gana a piedra.',
+    prizes: 'Ganas 1 punto por cada mano vencedora.',
     image: '../public/assets/handswar/handswar-card.png',
     filename: 'handswar' // This must be the folder name and js file name.
   },
