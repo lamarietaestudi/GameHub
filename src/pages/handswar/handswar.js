@@ -5,7 +5,6 @@ import { updateCounter } from '../../components/counter/counter.js';
 const handChoices = ['rock', 'paper', 'scissors'];
 export const initSpecificGame = () => {
   const gameContainer = document.querySelector('.game-container');
-  gameContainer.innerHTML = '';
 
   const scenario = document.createElement('div');
   scenario.classList.add('scenario');

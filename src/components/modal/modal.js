@@ -48,7 +48,7 @@ export const createModal = () => {
 const resetGame = () => {
   const gameContainer = document.querySelector('.game-container');
   if (gameContainer) {
-    gameContainer.innerHTML = '';
+    gameContainer.innerHTML = ''; //!cuidado de no repetirlo en el backbutton
   }
 };
 
