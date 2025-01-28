@@ -12,8 +12,8 @@ export const gamesData = [
     id: 2,
     name: 'Tic Tac Toe',
     instructions:
-      'Para ganar coloca tres de tus símbolos en línea (horizontal, vertical o diagonal) antes que tu oponente.',
-    prizes: 'Ganas 1 punto por cada partida que ganes.',
+      'Este es un juego de 3 en raya PARA 2 JUGADORES. <br> El objetivo es ser el primer jugador en alinear tres símbolos iguales en una fila, columna o diagonal. <br> El primer jugador juega con "X", y el segundo jugador con "O". <br> El juego termina cuando uno de los jugadores consiga el objetivo jugando en turnos alternos, o bien cuando todas las casillas estén llenas. En ese caso habrá un empate. ',
+    prizes: 'No hay recompensa de puntos para este juego.',
     image: '../public/assets/tictactoe/tictactoe-card.png',
     filename: 'tictactoe' // This must be the folder name and js file name.
   },

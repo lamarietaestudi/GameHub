@@ -1,5 +1,5 @@
 import './header.css';
-import { createCounter, updateCounter, clearCounter } from '../counter/counter';
+import { createCounter, clearCounter } from '../counter/counter';
 
 export const createHeader = () => {
   const headerContainer = document.createElement('header');

@@ -5,7 +5,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  margin: 10px;
+  margin: var(--gh-margin-xs);
 }
 
 .game-card:hover {
@@ -15,11 +15,11 @@
 }
 
 .game-name {
-  font-size: 20px;
+  font-size: var(--gh-fontsize-title);
   font-weight: 400;
   color: var(--gh-text-gamename);
-  margin-top: 50px;
-  padding-bottom: 10px;
+  margin-top: var(--gh-margin-xl);
+  padding-bottom: var(--gh-padding-xs);
 }
 
 .game-img {

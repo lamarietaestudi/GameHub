@@ -3,10 +3,10 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: var(--gh-padding-xs);
   background-color: var(--gh-header-background);
 }
 
@@ -18,8 +18,8 @@
 
 .clear-button {
   display: inline-flex;
-  padding: 10px 15px;
-  background-color: var(--gh-button-background);
+  padding: var(--gh-padding-xs) var(--gh-padding-s);
+  background-color: var(--gh-button-background-green);
   color: var(--gh-text-basic-light);
   border: none;
   border-radius: 4px;
@@ -28,5 +28,5 @@
 }
 
 .clear-button:hover {
-  background-color: var(--gh-card-shadow);
+  background-color: var(--gh-button-background-granat);
 }

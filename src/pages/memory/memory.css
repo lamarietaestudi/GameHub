@@ -1,42 +1,38 @@
-/* memory.css */
-
 .scenario {
-  display: flex;
-  flex-wrap: wrap;
+  background-color: #f79393;
   justify-content: center;
-  gap: 10px;
 }
 
 .single-card {
-  width: 100px;
+  width: 150px;
   height: 150px;
   position: relative;
-  perspective: 1000px;
   cursor: pointer;
+  margin: 20px;
 }
 
 .card-front,
 .card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
+  font-size: 80px;
   border-radius: 10px;
-  border: 2px solid #ccc;
   transition: transform 0.6s;
 }
 
 .card-front {
   transform: rotateY(180deg);
-  background-color: #fff;
+  background-color: #e4e7bc;
 }
 
 .card-back {
-  background-color: #e0e0e0;
+  background-color: #660727;
+  box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
 }
 
 .covered .card-front {
@@ -51,11 +47,7 @@
 .discovered .card-back {
   transform: rotateY(180deg);
 }
-
-.matched {
-  pointer-events: none;
-}
-
+/* 
 @media (max-width: 768px) {
   .single-card {
     width: 80px;
@@ -78,4 +70,4 @@
   .card-back {
     font-size: 30px;
   }
-}
+} */

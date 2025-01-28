@@ -1,39 +1,42 @@
 .modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  background: #00000080;
 }
 
 .modal-content {
-  width: 90%;
+  width: 70%;
   background: var(--gh-modal-background);
-  padding: 20px;
+  padding: var(--gh-padding-s);
   border-radius: 5px;
   text-align: center;
 }
 
 .modal-message {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: var(--gh-fontsize-text);
+  margin: var(--gh-margin-s);
 }
 
 .modal-button {
-  padding: 10px 20px;
-  background-color: var(--gh-button-background);
-  color: var(-gh-text-basic-dark);
+  padding: var(--gh-padding-xs) var(--gh-padding-m);
+  background-color: var(--gh-button-background-green);
+  color: var(--gh-text-button-green);
   border: none;
   border-radius: 10px;
   margin: 10px;
   cursor: pointer;
+  box-shadow: 0px 0px 30px 0px var(--gh-button-background-green);
 }
 
 .modal-button:hover {
-  background-color: var(--gh-text-gamename);
+  background-color: var(--gh-button-background-granat);
+  color: var(--gh-text-button-granat);
+  box-shadow: 0px 0px 30px 0px var(--gh-button-background-granat);
 }

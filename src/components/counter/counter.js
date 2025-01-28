@@ -27,7 +27,7 @@ export const updateCounter = (newPoints) => {
   const pointsLabel = document.querySelector('.points-label');
   if (pointsLabel) {
     pointsLabel.textContent = `Puntos: ${points}`;
-    console.log('Updated localStorage:', localStorage.getItem('points'));
+    localStorage.getItem('points');
   }
 };
 

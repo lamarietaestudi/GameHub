@@ -1,5 +1,5 @@
 import { createCardGames } from '../gamecards/gamecards.js';
-import './initGame.css';
+import '../../style.css';
 
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
@@ -19,7 +19,7 @@ export const initGame = (game) => {
 
   const gameInstructions = document.createElement('p');
   gameInstructions.classList.add('game-instructions');
-  gameInstructions.textContent = game.instructions;
+  gameInstructions.innerHTML = game.instructions;
 
   const gamePrizes = document.createElement('p');
   gamePrizes.classList.add('game-prizes');

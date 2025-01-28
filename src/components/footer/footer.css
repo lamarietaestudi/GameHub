@@ -8,8 +8,7 @@
 }
 
 .footer-info {
-  font-family: 'tomorrow';
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--gh-fontsize-buttons);
   color: var(--gh-text-basic-light);
 }

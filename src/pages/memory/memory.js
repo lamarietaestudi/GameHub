@@ -32,7 +32,7 @@ const createSingleCard = (card) => {
 
   const cardCovered = document.createElement('div');
   cardCovered.classList.add('card-back');
-  cardCovered.textContent = '❓';
+  cardCovered.textContent = '❔';
 
   const cardDiscovered = document.createElement('div');
   cardDiscovered.classList.add('card-front');

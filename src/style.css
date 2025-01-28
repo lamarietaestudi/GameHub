@@ -3,12 +3,44 @@
   --gh-text-basic-light: #ffffff;
   --gh-text-basic-dark: #171717;
   --gh-text-gamename: #c6ff41;
+  --gh-text-button-green: #3b1825;
+  --gh-text-button-granat: #ffffff;
+
   --gh-header-background: #c6ff41;
-  --gh-button-background: #81a62a;
   --gh-body-background: #5a2337;
   --gh-footer-background: #3b1825;
+
+  --gh-button-background-green: #81a62a;
+  --gh-button-background-granat: #3b1825;
+
   --gh-modal-background: #ffffff;
+  --gh-modal-buttons: #81a62a;
+
   --gh-card-shadow: #3b1825;
+
+  /* FONT SIZE */
+  --gh-fontsize-title: 24px;
+  --gh-fontsize-text: 18px;
+  --gh-fontsize-buttons: 14px;
+
+  /* MARGIN - PADDING - GAP */
+  --gh-margin-xl: 50px;
+  --gh-margin-l: 40px;
+  --gh-margin-m: 30px;
+  --gh-margin-s: 20px;
+  --gh-margin-xs: 10px;
+
+  --gh-padding-xl: 50px;
+  --gh-padding-l: 40px;
+  --gh-padding-m: 30px;
+  --gh-padding-s: 20px;
+  --gh-padding-xs: 10px;
+
+  --gh-gap-xl: 50px;
+  --gh-gap-l: 40px;
+  --gh-gap-m: 30px;
+  --gh-gap-s: 20px;
+  --gh-gap-xs: 10px;
 }
 
 * {
@@ -27,12 +59,71 @@
   background-color: var(--gh-body-background);
   height: auto;
   min-height: calc(100vh - 100px);
-  padding: 20px;
 }
 
-.games-content {
+.init-game-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  padding: var(--gh-padding-s);
+}
+
+.back-button {
+  margin: var(--gh-margin-xs) var(--gh-margin-m);
+  padding: var(--gh-padding-xs) var(--gh-padding-s);
+  background-color: var(--gh-button-background-granat);
+  color: var(--gh-text-basic-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.back-button:hover {
+  color: var(--gh-text-button-green);
+  background-color: var(--gh-button-background-green);
+}
+
+.game-title {
+  font-size: var(--gh-fontsize-title);
+  font-weight: 400;
+  color: var(--gh-text-gamename);
+  padding: var(--gh-padding-s);
+  text-align: center;
+}
+
+.game-instructions,
+.game-prizes {
+  text-align: center;
+  font-size: var(--gh-fontsize-text);
+  margin: 0 0 var(--gh-margin-xs) 0;
+  color: var(--gh-text-basic-light);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
+  padding: var(--gh-padding-xs) var(--gh-padding-s);
+}
+
+.scenario {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: var(--gh-margin-xs);
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
 }

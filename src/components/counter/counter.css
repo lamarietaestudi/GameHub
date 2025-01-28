@@ -1,10 +1,10 @@
 .counter-container {
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: var(--gh-padding-xs) var(--gh-padding-s);
+  font-size: var(--gh-fontsize-buttons);
   color: var(--gh-text-basic-light);
-  background-color: var(--gh-footer-background);
+  background-color: var(--gh-button-background-granat);
   border-radius: 10px;
-  box-shadow: 0px 0px 5px var(--gh-card-shadow);
+  box-shadow: 0px 0px 5px var(--gh-button-background-granat);
 }
 
 .points-label {
