@@ -1,7 +1,5 @@
 import './tictactoe.css';
 import { createModal } from '../../components/modal/modal.js';
-import { updateCounter } from '../../components/counter/counter.js';
-import { gamesData } from '../../data/gamesData.js';
 
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
@@ -24,7 +22,7 @@ export const initSpecificGame = () => {
   });
 
   const ticTacToeResult = document.createElement('p');
-  ticTacToeResult.classList.add('tictactoe-result');
+  ticTacToeResult.classList.add('tictactoe-result', 'hidden');
 
   scenario.append(boardItem, ticTacToeResult);
   startGame();
@@ -47,15 +45,19 @@ const cellClickEvent = (cellItem) => {
   }
   gameBoard[index] = currentPlayer;
   cellItem.textContent = currentPlayer;
+  const ticTacToeResult = document.querySelector('.tictactoe-result');
   if (checkingWinner()) {
     gameActive = false;
-    const ticTacToeResult = document.querySelector('.tictactoe-result');
     ticTacToeResult.textContent = `Gana Jugador ${
       currentPlayer === 'X' ? 1 : 2
     } con "${currentPlayer}"`;
+    ticTacToeResult.classList.remove('hidden');
+    setTimeout(endGame, 2000);
   } else if (!gameBoard.includes('')) {
     gameActive = false;
     ticTacToeResult.textContent = 'Hay un empate.';
+    ticTacToeResult.classList.remove('hidden');
+    setTimeout(endGame, 2000);
   } else {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
   }
@@ -90,6 +92,7 @@ const startGame = () => {
     cell.textContent = '';
     const ticTacToeResult = document.querySelector('.tictactoe-result');
     ticTacToeResult.textContent = '';
+    ticTacToeResult.classList.add('hidden');
   });
 };
 

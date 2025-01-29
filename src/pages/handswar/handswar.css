@@ -1,6 +1,7 @@
 .scenario {
   flex-direction: column;
   background-color: #fb8874;
+  flex-wrap: nowrap;
 }
 
 .your-hand-text,
@@ -69,7 +70,7 @@
   height: auto;
   border-radius: 20px;
 }
-/* 
+
 @media (max-width: 630px) {
   .your-hand-options {
     gap: 5px;
@@ -79,4 +80,4 @@
   .your-hand-options button img {
     width: 80%;
   }
-} */
+}

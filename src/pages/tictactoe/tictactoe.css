@@ -40,8 +40,27 @@
 
 .tictactoe-result {
   padding: var(--gh-padding-xs) var(--gh-padding-s);
+  margin: var(--gh-margin-xs) var(--gh-margin-s);
   font-size: var(--gh-fontsize-text);
   border-radius: 10px;
   background-color: var(--gh-footer-background);
   color: var(--gh-text-basic-light);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 360px) {
+  .scenario {
+    padding: 0px;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+  }
+  .board-item {
+    width: 300px;
+    height: 300px;
+    border: 2px;
+  }
 }

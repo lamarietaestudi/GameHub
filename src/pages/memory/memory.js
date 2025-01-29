@@ -66,10 +66,9 @@ const checkForMatch = () => {
   const [card1, card2] = selectedCards;
   if (card1.dataset.emotion === card2.dataset.emotion) {
     matchedCards++;
-    const currentPoints =
-      parseInt(localStorage.getItem('pointsCounter'), 10) || 0;
+    const currentPoints = parseInt(localStorage.getItem('points'), 10) || 0;
     const newPoints = currentPoints + 1;
-    localStorage.setItem('pointsCounter', newPoints);
+    localStorage.setItem('points', newPoints);
     updateCounter(newPoints);
 
     card1.classList.add('matched');

@@ -1,5 +1,5 @@
 .game-card {
-  display: flex;
+  display: flex-start;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
   font-size: var(--gh-fontsize-title);
   font-weight: 400;
   color: var(--gh-text-gamename);
-  margin-top: var(--gh-margin-xl);
+  margin-top: var(--gh-margin-xs);
   padding-bottom: var(--gh-padding-xs);
 }
 
@@ -29,4 +29,28 @@
   border-radius: 20px;
   background-color: var(--gh-header-background);
   box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
+}
+
+@media (max-width: 980px) {
+  .game-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 630px) {
+  .game-name {
+    font-size: var(--gh-fontsize-text);
+  }
+  .game-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 360px) {
+  .game-img {
+    width: 100px;
+    height: 100px;
+  }
 }

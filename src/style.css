@@ -55,7 +55,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: start;
+  align-content: flex-start;
   background-color: var(--gh-body-background);
   height: auto;
   min-height: calc(100vh - 100px);
@@ -126,4 +126,17 @@
   margin: var(--gh-margin-xs);
   border-radius: 15px;
   box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
+}
+
+@media (max-width: 412px) {
+  .game-title {
+    font-size: var(--gh-fontsize-text);
+    padding: var(--gh-padding-xs);
+  }
+
+  .game-instructions,
+  .game-prizes {
+    font-size: var(--gh-fontsize-buttons);
+    margin: 0 0 var(--gh-margin-xs) 0;
+  }
 }
