@@ -1,8 +1,11 @@
 import './gamecards.css';
 import { gamesData } from '../../data/gamesData.js';
 import { loadIdGame } from '../functions/loadIdGame.js';
+import { resetGame } from '../functions/resetGame.js';
 
 export function createCardGames(parentElement) {
+  resetGame();
+
   const gamesList = gamesData;
 
   gamesList.forEach((game) => {

@@ -1,5 +1,5 @@
-import { createCardGames } from '../gamecards/gamecards.js';
 import '../../style.css';
+import { createCardGames } from '../gamecards/gamecards.js';
 
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
@@ -31,7 +31,6 @@ export const initGame = (game) => {
   backButton.addEventListener('click', () => {
     localStorage.removeItem('currentGameId');
     gamesContainer.classList.remove('init-game-container');
-    gamesContainer.innerHTML = '';
     createCardGames(gamesContainer);
   });
 

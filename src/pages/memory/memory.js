@@ -2,6 +2,7 @@ import './memory.css';
 import { updateCounter } from '../../components/counter/counter';
 import { memoryCards } from '../../data/memoryData';
 import { createModal } from '../../components/modal/modal';
+import { resetGame } from '../../components/functions/resetGame';
 
 let selectedCards = [];
 let matchedCards = 0;
@@ -87,6 +88,11 @@ const checkForMatch = () => {
 };
 
 const endGame = () => {
+  resetGame();
+  const existingModal = document.querySelector('.modal-container');
+  if (existingModal) {
+    existingModal.remove();
+  }
   createModal();
 };
 

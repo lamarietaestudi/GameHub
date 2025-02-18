@@ -1,6 +1,7 @@
 import './handswar.css';
 import { createModal } from '../../components/modal/modal.js';
 import { updateCounter } from '../../components/counter/counter.js';
+import { resetGame } from '../../components/functions/resetGame.js';
 
 const handChoices = ['rock', 'paper', 'scissors'];
 export const initSpecificGame = () => {
@@ -68,6 +69,9 @@ export const initSpecificGame = () => {
 };
 
 const startHandsWar = () => {
+  document.querySelectorAll('.your-hand-options button').forEach((button) => {
+    button.disabled = 'true';
+  });
   const rivalHandContainer = document.querySelector('.rival-hand-container');
   rivalHandContainer.innerHTML = '';
   let timer = 0;
@@ -119,8 +123,11 @@ const showResult = (rivalChoice) => {
 };
 
 const endGame = () => {
-  const playButton = document.querySelector('.play-button');
-  playButton.disabled = false;
+  resetGame();
+  const existingModal = document.querySelector('.modal-container');
+  if (existingModal) {
+    existingModal.remove();
+  }
   createModal();
 };
 

@@ -1,5 +1,6 @@
 import './tictactoe.css';
 import { createModal } from '../../components/modal/modal.js';
+import { resetGame } from '../../components/functions/resetGame.js';
 
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
@@ -97,6 +98,11 @@ const startGame = () => {
 };
 
 const endGame = () => {
+  resetGame();
+  const existingModal = document.querySelector('.modal-container');
+  if (existingModal) {
+    existingModal.remove();
+  }
   createModal();
 };
 

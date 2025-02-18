@@ -1,6 +1,7 @@
 import './topocrash.css';
 import { updateCounter } from '../../components/counter/counter';
 import { createModal } from '../../components/modal/modal';
+import { resetGame } from '../../components/functions/resetGame';
 
 export const initSpecificGame = () => {
   topoCounter = 0;
@@ -87,6 +88,11 @@ const checkEndGameCondition = () => {
 };
 
 const endGame = () => {
+  resetGame();
+  const existingModal = document.querySelector('.modal-container');
+  if (existingModal) {
+    existingModal.remove();
+  }
   createModal();
 };
 

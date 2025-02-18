@@ -1,6 +1,7 @@
 import './modal.css';
 import { createCardGames } from '../gamecards/gamecards.js';
 import { loadIdGame } from '../functions/loadIdGame.js';
+import { resetGame } from '../functions/resetGame.js';
 
 export const createModal = () => {
   const modalContainer = document.createElement('div');
@@ -29,7 +30,6 @@ export const createModal = () => {
   closeButton.textContent = 'No';
   closeButton.addEventListener('click', () => {
     closeModal(modalContainer);
-    resetGame();
     const gamesContainer = document.querySelector('.games-container');
     gamesContainer.classList.remove('init-game-container');
     gamesContainer.innerHTML = '';
@@ -45,13 +45,7 @@ export const createModal = () => {
   return { playButton, closeButton, modalContainer };
 };
 
-const resetGame = () => {
-  const gameContainer = document.querySelector('.game-container');
-  if (gameContainer) {
-    gameContainer.innerHTML = ''; //!cuidado de no repetirlo en el backbutton
-  }
-};
-
 const closeModal = (modal) => {
+  resetGame();
   document.body.removeChild(modal);
 };
