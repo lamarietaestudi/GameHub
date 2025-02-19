@@ -1,7 +1,15 @@
-.scenario {
+.scenario-handswar {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #fb8874;
   flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: var(--gh-margin-xs);
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
 }
 
 .your-hand-text,

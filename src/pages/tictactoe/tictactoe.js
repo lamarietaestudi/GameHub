@@ -10,7 +10,7 @@ export const initSpecificGame = () => {
   const gameContainer = document.querySelector('.game-container');
 
   const scenario = document.createElement('div');
-  scenario.classList.add('scenario');
+  scenario.classList.add('scenario-tictactoe');
 
   gameContainer.append(scenario);
 

@@ -1,9 +1,17 @@
-.scenario {
-  background-color: var(--gh-header-background);
-  padding: var(--gh-padding-s);
+.scenario-tictactoe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   width: auto;
+  height: 100%;
+  overflow: hidden;
+  margin: var(--gh-margin-xs);
+  padding: var(--gh-padding-s);
+  background-color: var(--gh-header-background);
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 0px var(--gh-card-shadow);
 }
 
 .board-item {

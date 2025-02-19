@@ -1,5 +1,6 @@
 import '../../style.css';
 import { createCardGames } from '../gamecards/gamecards.js';
+import { resetGame } from './resetGame.js';
 
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
@@ -29,6 +30,8 @@ export const initGame = (game) => {
   backButton.classList.add('back-button');
   backButton.textContent = 'Volver al menú de juegos';
   backButton.addEventListener('click', () => {
+    backButton.style.display = 'none';
+    resetGame();
     localStorage.removeItem('currentGameId');
     gamesContainer.classList.remove('init-game-container');
     createCardGames(gamesContainer);

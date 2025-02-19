@@ -8,7 +8,7 @@ export const initSpecificGame = () => {
   const gameContainer = document.querySelector('.game-container');
 
   const scenario = document.createElement('img');
-  scenario.classList.add('scenario');
+  scenario.classList.add('scenario-topocrash');
   scenario.src = './public/assets/topocrash/topo-crash-scenario.svg';
   scenario.alt = 'grass image';
 
@@ -19,9 +19,10 @@ export const initSpecificGame = () => {
 
 let topoCounter = 0;
 const maxTopos = 20;
+export let topoInterval;
 
 const startTopoGeneration = () => {
-  const topoInterval = setInterval(() => {
+  topoInterval = setInterval(() => {
     if (topoCounter < maxTopos) {
       createTopo();
     } else {
@@ -33,7 +34,7 @@ const startTopoGeneration = () => {
 
 const createTopo = () => {
   const gameContainer = document.querySelector('.game-container');
-  const scenario = document.querySelector('.scenario');
+  const scenario = document.querySelector('.scenario-topocrash');
 
   const imgTopo = document.createElement('img');
   imgTopo.classList.add('topo-img');
