@@ -1,38 +1,30 @@
 import './counter.css';
 
-if (!localStorage.getItem('points')) {
-  localStorage.setItem('points', '0');
-}
-let points = parseInt(localStorage.getItem('points'), 10);
+export const createCounter = (gameName) => {
+  const storedPoints = localStorage.getItem(`points_${gameName}`) || '0';
+  let points = parseInt(storedPoints, 10);
 
-export const createCounter = () => {
   const counterContainer = document.createElement('div');
   counterContainer.className = 'counter-container';
 
   const pointsLabel = document.createElement('div');
   pointsLabel.className = 'points-label';
-  pointsLabel.textContent = `Puntos: ${points} `;
+  pointsLabel.textContent = `Puntos:  ${points}`;
 
-  const pointsValue = document.createElement('div');
-  pointsValue.className = 'points-value';
-  pointsValue.textContent = points;
-
-  counterContainer.appendChild(pointsLabel, pointsValue);
+  counterContainer.append(pointsLabel);
   return counterContainer;
 };
 
-export const updateCounter = (newPoints) => {
-  points = newPoints;
-  localStorage.setItem('points', points);
+export const updateCounter = (gameName, newPoints) => {
+  localStorage.setItem(`points_${gameName}`, newPoints);
   const pointsLabel = document.querySelector('.points-label');
   if (pointsLabel) {
-    pointsLabel.textContent = `Puntos: ${points}`;
-    localStorage.getItem('points');
+    pointsLabel.textContent = `Puntos:  ${newPoints}`;
   }
 };
 
-export const clearCounter = () => {
-  points = 0;
-  localStorage.setItem('points', points);
-  updateCounter(points);
+export const resetCounter = (gameName) => {
+  console.log(gameName);
+  localStorage.setItem(`points_${gameName}`, 0);
+  updateCounter(gameName, 0);
 };

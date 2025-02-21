@@ -4,6 +4,8 @@ import { updateCounter } from '../../components/counter/counter.js';
 import { resetGame } from '../../components/functions/resetGame.js';
 
 const handChoices = ['rock', 'paper', 'scissors'];
+const gameName = 'Hands War';
+
 export const initSpecificGame = () => {
   const gameContainer = document.querySelector('.game-container');
 
@@ -102,7 +104,8 @@ const showResult = (rivalChoice) => {
   const playerChoice = selectedButton.dataset.choice;
   const results = document.querySelector('.hands-war-result');
 
-  let currentPoints = parseInt(localStorage.getItem('points'), 10) || 0;
+  let currentPoints =
+    parseInt(localStorage.getItem(`points_${gameName}`), 10) || 0;
 
   if (playerChoice === rivalChoice) {
     results.textContent = `¡Hay un empate!`;
@@ -112,8 +115,7 @@ const showResult = (rivalChoice) => {
     (playerChoice === 'paper' && rivalChoice === 'rock')
   ) {
     currentPoints += 1;
-    localStorage.setItem('points', currentPoints);
-    updateCounter(currentPoints);
+    updateCounter(gameName, currentPoints);
     results.textContent = `¡Enhorabuena, has ganado!`;
   } else {
     results.textContent = `Lo siento, has perdido.`;

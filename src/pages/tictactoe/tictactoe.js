@@ -9,6 +9,11 @@ let gameActive = true;
 export const initSpecificGame = () => {
   const gameContainer = document.querySelector('.game-container');
 
+  const counter = document.querySelector('.counter-container');
+  if (counter) counter.remove();
+  const resetButton = document.querySelector('.reset-points-button');
+  if (resetButton) resetButton.remove();
+
   const scenario = document.createElement('div');
   scenario.classList.add('scenario-tictactoe');
 

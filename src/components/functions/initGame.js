@@ -1,6 +1,7 @@
 import '../../style.css';
-import { createCardGames } from '../gamecards/gamecards.js';
-import { resetGame } from './resetGame.js';
+import { createCounter } from '../counter/counter.js';
+import { backButton } from '../buttons/buttons.js';
+import { resetPointsButton } from '../buttons/buttons.js';
 
 export const initGame = (game) => {
   const gamesContainer = document.querySelector('.games-container');
@@ -10,6 +11,15 @@ export const initGame = (game) => {
   }
   gamesContainer.classList.add('init-game-container');
   gamesContainer.innerHTML = '';
+
+  const topContainer = document.createElement('div');
+  topContainer.classList.add('top-container');
+
+  topContainer.append(
+    backButton(),
+    createCounter(game.name),
+    resetPointsButton(game.name)
+  );
 
   const gameContainer = document.createElement('div');
   gameContainer.classList.add('game-container');
@@ -26,17 +36,6 @@ export const initGame = (game) => {
   gamePrizes.classList.add('game-prizes');
   gamePrizes.textContent = game.prizes;
 
-  const backButton = document.createElement('button');
-  backButton.classList.add('back-button');
-  backButton.textContent = 'Volver al menú de juegos';
-  backButton.addEventListener('click', () => {
-    backButton.style.display = 'none';
-    resetGame();
-    localStorage.removeItem('currentGameId');
-    gamesContainer.classList.remove('init-game-container');
-    createCardGames(gamesContainer);
-  });
-
   gameContainer.append(gameTitle, gameInstructions, gamePrizes);
-  gamesContainer.append(backButton, gameContainer);
+  gamesContainer.append(topContainer, gameContainer);
 };

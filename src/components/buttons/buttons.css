@@ -1,0 +1,38 @@
+.back-button {
+  margin: var(--gh-margin-xs);
+  padding: var(--gh-padding-xs) var(--gh-padding-s);
+  background-color: var(--gh-button-background-green);
+  color: var(--gh-text-button-green);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.back-button:hover {
+  color: var(--gh-text-basic-light);
+  background-color: var(--gh-button-background-granat);
+}
+
+.reset-points-button {
+  display: inline-flex;
+  margin: var(--gh-margin-xs);
+  padding: var(--gh-padding-xs) var(--gh-padding-s);
+  background-color: var(--gh-button-background-green);
+  color: var(--gh-text-button-green);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.reset-points-button:hover {
+  background-color: var(--gh-button-background-granat);
+  color: var(--gh-text-basic-light);
+}
+
+@media (max-width: 440px) {
+  .reset-points-button {
+    padding: var(--gh-padding-xs);
+  }
+}

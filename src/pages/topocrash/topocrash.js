@@ -3,6 +3,11 @@ import { updateCounter } from '../../components/counter/counter';
 import { createModal } from '../../components/modal/modal';
 import { resetGame } from '../../components/functions/resetGame';
 
+const gameName = 'Topo Crash';
+let topoCounter = 0;
+const maxTopos = 20;
+export let topoInterval;
+
 export const initSpecificGame = () => {
   topoCounter = 0;
   const gameContainer = document.querySelector('.game-container');
@@ -16,10 +21,6 @@ export const initSpecificGame = () => {
 
   scenario.onload = startTopoGeneration;
 };
-
-let topoCounter = 0;
-const maxTopos = 20;
-export let topoInterval;
 
 const startTopoGeneration = () => {
   topoInterval = setInterval(() => {
@@ -71,9 +72,10 @@ const createTopo = () => {
 };
 
 const topoCrash = (imgTopo) => {
-  let currentPoints = parseInt(localStorage.getItem('points'), 10) || 0;
+  let currentPoints =
+    parseInt(localStorage.getItem(`points_${gameName}`), 10) || 0;
   currentPoints += 1;
-  updateCounter(currentPoints);
+  updateCounter(gameName, currentPoints);
 
   if (imgTopo.parentNode) {
     imgTopo.remove();

@@ -4,6 +4,8 @@ import { memoryCards } from '../../data/memoryData';
 import { createModal } from '../../components/modal/modal';
 import { resetGame } from '../../components/functions/resetGame';
 
+const gameName = 'Memory Card';
+
 let selectedCards = [];
 let matchedCards = 0;
 
@@ -67,16 +69,19 @@ const checkForMatch = () => {
   const [card1, card2] = selectedCards;
   if (card1.dataset.emotion === card2.dataset.emotion) {
     matchedCards++;
-    const currentPoints = parseInt(localStorage.getItem('points'), 10) || 0;
-    const newPoints = currentPoints + 1;
-    localStorage.setItem('points', newPoints);
-    updateCounter(newPoints);
+
+    let currentPoints =
+      parseInt(localStorage.getItem(`points_${gameName}`), 10) || 0;
+
+    currentPoints += 1;
+    localStorage.setItem(`points_${gameName}`, currentPoints);
+    updateCounter(gameName, currentPoints);
 
     card1.classList.add('matched');
     card2.classList.add('matched');
     selectedCards = [];
     if (matchedCards === memoryCards.length / 2) {
-      setTimeout(endGame, 100);
+      setTimeout(endGame, 1500);
     }
   } else {
     card1.classList.remove('discovered');

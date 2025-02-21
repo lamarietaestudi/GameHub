@@ -1,4 +1,7 @@
 .counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: var(--gh-padding-xs) var(--gh-padding-s);
   font-size: var(--gh-fontsize-buttons);
   color: var(--gh-text-basic-light);
@@ -11,9 +14,6 @@
   margin-right: auto;
 }
 
-.points-value {
-  font-size: 30px;
-}
 @media (max-width: 480px) {
   .counter-container {
     padding: var(--gh-padding-xs);
